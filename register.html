@@ -4,27 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Register • Pack 269</title>
+<link rel="icon" type="image/jpeg" href="./images/pack269-logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/pack269-logo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/pack269-logo.jpg">
+<link rel="shortcut icon" href="./images/pack269-logo.jpg">
+<meta name="theme-color" content="#1e3a5f">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-[#1e3a5f]">
-    <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-3">
-        <img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" />
-        <span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
-        <a href="./index.html#about" class="hover:text-white">ABOUT</a>
-        <a href="./index.html#calendar" class="hover:text-white">CALENDAR</a>
-        <a href="./faq.html" class="hover:text-white">FAQ</a>
-        <a href="./register.html" class="text-white">REGISTER</a>
-        <a href="./index.html#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold">JOIN</a>
-      </nav>
+<header class="sticky top-0 z-50 bg-[#1e3a5f]">
+  <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between relative">
+    <a href="./index.html" class="flex items-center gap-3"><img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" /><span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
+      <a href="./index.html#about" class="hover:text-white">ABOUT</a><a href="./index.html#calendar" class="hover:text-white">CALENDAR</a><a href="./faq.html" class="hover:text-white">FAQ</a><a href="./register.html" class="text-white">REGISTER</a><a href="./index.html#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold tracking-[0.16em]">JOIN</a>
+    </nav>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="./index.html#join" class="px-4 py-2 bg-white text-[#1e3a5f] rounded-full text-[11px] font-black tracking-widest">JOIN</a>
+      <button id="menuBtn" onclick="toggleNav()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/20 text-white text-[18px]">☰</button>
     </div>
-  </header>
+    <div id="mobileMenu" class="hidden md:hidden absolute top-[64px] left-0 w-full bg-white border-t border-zinc-100 shadow-2xl z-50">
+      <div class="px-2 py-2">
+        <a href="./index.html#about" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">ABOUT</a>
+        <a href="./index.html#calendar" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">CALENDAR</a>
+        <a href="./faq.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">FAQ</a>
+        <a href="./register.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] bg-zinc-50 text-[#1e3a5f]">REGISTER</a>
+        <a href="./index.html#join" onclick="toggleNav()" class="mt-2 block px-4 py-3 rounded-xl bg-[#1e3a5f] text-white text-center text-[12px] font-black tracking-[0.16em]">JOIN PACK 269</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <!-- HERO -->
+  <!-- HERO - EXACT FROM BASELINE -->
   <section class="bg-[#eff6ff] border-b border-blue-100">
     <div class="mx-auto max-w-[1120px] px-6 py-16 md:py-20">
       <span class="inline-flex px-3 py-1 rounded-full bg-white text-[#1e3a5f] text-[11px] font-bold tracking-wide border">4 EASY STEPS</span>
@@ -36,7 +46,7 @@
     </div>
   </section>
 
-  <!-- STEPS -->
+  <!-- STEPS - EXACT FROM BASELINE - DO NOT REFORMAT -->
   <main class="mx-auto max-w-[1120px] px-6 py-12 md:py-16">
     <div class="grid md:grid-cols-2 gap-6">
       <!-- STEP 1 -->
@@ -125,5 +135,9 @@
       </div>
     </div>
   </footer>
+<script>
+function toggleNav(){var m=document.getElementById('mobileMenu');if(m)m.classList.toggle('hidden');var b=document.getElementById('menuBtn');if(b)b.textContent=m&&!m.classList.contains('hidden')?'✕':'☰';}
+function toggleFAQ(btn){var c=btn.nextElementSibling;var i=btn.querySelector('[data-icon]');var h=c.classList.contains('hidden');c.classList.toggle('hidden');if(i)i.textContent=h?'–':'+';}
+</script>
 </body>
 </html>

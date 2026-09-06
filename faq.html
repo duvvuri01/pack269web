@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ • Cub Scout Pack 269</title>
+<link rel="icon" type="image/jpeg" href="./images/pack269-logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/pack269-logo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/pack269-logo.jpg">
+<link rel="shortcut icon" href="./images/pack269-logo.jpg">
+<meta name="theme-color" content="#1e3a5f">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     details > summary { list-style: none; }
@@ -11,24 +16,29 @@
   </style>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-[#1e3a5f]">
-    <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-3">
-        <img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" />
-        <span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
-        <a href="./index.html#about" class="hover:text-white">ABOUT</a>
-        <a href="./index.html#calendar" class="hover:text-white">CALENDAR</a>
-        <a href="./faq.html" class="text-white">FAQ</a>
-        <a href="./register.html" class="hover:text-white">REGISTER</a>
-        <a href="./index.html#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold">JOIN</a>
-      </nav>
+<header class="sticky top-0 z-50 bg-[#1e3a5f]">
+  <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between relative">
+    <a href="./index.html" class="flex items-center gap-3"><img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" /><span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
+      <a href="./index.html#about" class="hover:text-white">ABOUT</a><a href="./index.html#calendar" class="hover:text-white">CALENDAR</a><a href="./faq.html" class="text-white">FAQ</a><a href="./register.html" class="hover:text-white">REGISTER</a><a href="./index.html#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold tracking-[0.16em]">JOIN</a>
+    </nav>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="./index.html#join" class="px-4 py-2 bg-white text-[#1e3a5f] rounded-full text-[11px] font-black tracking-widest">JOIN</a>
+      <button id="menuBtn" onclick="toggleNav()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/20 text-white text-[18px]">☰</button>
     </div>
-  </header>
+    <div id="mobileMenu" class="hidden md:hidden absolute top-[64px] left-0 w-full bg-white border-t border-zinc-100 shadow-2xl z-50">
+      <div class="px-2 py-2">
+        <a href="./index.html#about" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">ABOUT</a>
+        <a href="./index.html#calendar" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">CALENDAR</a>
+        <a href="./faq.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] bg-zinc-50 text-[#1e3a5f]">FAQ</a>
+        <a href="./register.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">REGISTER</a>
+        <a href="./index.html#join" onclick="toggleNav()" class="mt-2 block px-4 py-3 rounded-xl bg-[#1e3a5f] text-white text-center text-[12px] font-black tracking-[0.16em]">JOIN PACK 269</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <!-- FAQ -->
+  <!-- FAQ - EXACT FROM BASELINE -->
   <main class="mx-auto max-w-3xl px-6 py-16 md:py-20">
     <div class="text-center">
       <span class="inline-flex px-3 py-1 rounded-full bg-[#eff6ff] text-[#1e3a5f] text-[11px] font-bold tracking-wide">PACK 269 • FREMONT</span>
@@ -112,44 +122,21 @@ weekend family camping trips, we give kids the chance to connect with nature and
       <!-- FAQ ITEM 3 -->
       <div class="border-b border-zinc-200">
         <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center py-5 text-left group">
-          <span class="text-[18px] font-black text-[#1e3a5f] tracking-tight">What is my role as a parent or guardian?</span>
-          <span data-icon class="ml-4 w-8 h-8 rounded-full border flex items-center justify-center font-mono text-[18px] text-zinc-600 group-hover:bg-zinc-50">+</span>
-        </button>
-        <div class="hidden pb-8 space-y-4 text-[15px] leading-relaxed text-zinc-600">
-          <p>
-            Parental involvement is encouraged and makes Scouting a richer experience for everyone. At minimum, we ask that a parent or guardian accompany their scout to meetings.
-          </p>
-        </div>
-      </div>
-
-      <!-- FAQ ITEM 4 -->
-      <div class="border-b border-zinc-200">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center py-5 text-left group">
-          <span class="text-[18px] font-black text-[#1e3a5f] tracking-tight">How else can parents or guardians get involved?</span>
-          <span data-icon class="ml-4 w-8 h-8 rounded-full border flex items-center justify-center font-mono text-[18px] text-zinc-600 group-hover:bg-zinc-50">+</span>
-        </button>
-        <div class="hidden pb-8 space-y-4 text-[15px] leading-relaxed text-zinc-600">
-          <p>
-            Cub Scouts is a family program, and our Pack runs best when everyone pitches in. Every family plays a role in making the experience fun, organized, and meaningful for the Scouts. Simply put, the Pack cannot operate without volunteers.
-          </p>
-          <p>
-            We ask parents to support Den Leaders and Pack Leaders by volunteering when opportunities arise. We understand that schedules are busy and it is not always possible to help every time, and that is completely okay. No one is expected to volunteer at every event.
-          </p>
-          <p>
-            There are many different ways to get involved throughout the year. Some roles are quick and easy, such as helping set up or clean up at a Pack meeting. Other opportunities involve a bigger commitment, such as helping run an event, serving as a Den Leader, or joining the Pack Committee.
-          </p>
-        </div>
-      </div>
-
-      <!-- FAQ ITEM 5 -->
-      <div class="border-b border-zinc-200">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center py-5 text-left group">
           <span class="text-[18px] font-black text-[#1e3a5f] tracking-tight">How much does it cost?</span>
           <span data-icon class="ml-4 w-8 h-8 rounded-full border flex items-center justify-center font-mono text-[18px] text-zinc-600 group-hover:bg-zinc-50">+</span>
         </button>
-        <div class="hidden pb-8">
-          <div class="overflow-hidden rounded-2xl border border-zinc-200">
-            <table class="w-full text-[14px] border-collapse">
+        <div class="hidden pb-8 space-y-4 text-[15px] leading-relaxed text-zinc-600">
+          <p>
+            We keep fees transparent and low. Scouts pay national/council registration once a year, plus modest pack dues that cover awards, supplies, and events. See detailed breakdown below.
+          </p>
+          <div class="mt-4 overflow-hidden rounded-2xl border border-zinc-200">
+            <table class="w-full text-left text-[13px]">
+              <thead class="bg-zinc-50 text-[11px] tracking-widest text-zinc-500">
+                <tr>
+                  <th class="p-4 font-bold">FEE</th>
+                  <th class="p-4 text-right font-bold">AMOUNT</th>
+                </tr>
+              </thead>
               <tbody class="divide-y divide-zinc-100">
                 <tr>
                   <td class="p-4 md:px-5">
@@ -220,7 +207,6 @@ Note that our fall and spring campouts do not have additional fees but some opti
       </div>
 
       <!-- FAQ ITEM 7 -->
-      <!-- FAQ ITEM 6 -->
       <div class="border-b border-zinc-200">
         <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center py-5 text-left group">
           <span class="text-[18px] font-black text-[#1e3a5f] tracking-tight">What parts of the uniform should I buy?</span>
@@ -232,8 +218,6 @@ Note that our fall and spring campouts do not have additional fees but some opti
           </p>
         </div>
       </div>
-
-
 
         
     </div>
@@ -257,14 +241,9 @@ Note that our fall and spring campouts do not have additional fees but some opti
     </div>
   </footer>
 
-  <script>
-    function toggleFAQ(btn) {
-      var content = btn.nextElementSibling;
-      var icon = btn.querySelector('[data-icon]');
-      var isHidden = content.classList.contains('hidden');
-      content.classList.toggle('hidden');
-      icon.textContent = isHidden ? '–' : '+';
-    }
-  </script>
+<script>
+function toggleNav(){var m=document.getElementById('mobileMenu');if(m)m.classList.toggle('hidden');var b=document.getElementById('menuBtn');if(b)b.textContent=m&&!m.classList.contains('hidden')?'✕':'☰';}
+function toggleFAQ(btn){var c=btn.nextElementSibling;var i=btn.querySelector('[data-icon]');var h=c.classList.contains('hidden');c.classList.toggle('hidden');if(i)i.textContent=h?'–':'+';}
+</script>
 </body>
 </html>

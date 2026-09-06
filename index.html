@@ -4,28 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pack 269 • Cub Scouts Fremont, CA</title>
+<link rel="icon" type="image/jpeg" href="./images/pack269-logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/pack269-logo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/pack269-logo.jpg">
+<link rel="shortcut icon" href="./images/pack269-logo.jpg">
+<meta name="theme-color" content="#1e3a5f">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-[#1e3a5f]">
-    <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-3">
-        <img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" />
-        <span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
-        <a href="#about" class="hover:text-white">ABOUT</a>
-        <a href="#calendar" class="hover:text-white">CALENDAR</a>
-        <a href="./faq.html" class="hover:text-white">FAQ</a>
-        <a href="./register.html" class="hover:text-white">REGISTER</a>
-        <a href="#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold tracking-[0.16em]">JOIN</a>
-      </nav>
-      <a href="#join" class="md:hidden px-4 py-2 bg-white text-[#1e3a5f] rounded-full text-[11px] font-black tracking-widest">JOIN</a>
+<header class="sticky top-0 z-50 bg-[#1e3a5f]">
+  <div class="mx-auto max-w-[1120px] px-6 h-[64px] flex items-center justify-between relative">
+    <a href="./index.html" class="flex items-center gap-3"><img src="./images/pack269-logo.jpg" alt="Pack 269" class="h-10 w-10 rounded-full shadow-sm" /><span class="text-white font-black tracking-[0.18em] text-[13px]">PACK 269</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-[0.16em] text-blue-100">
+      <a href="#about" class="hover:text-white">ABOUT</a><a href="#calendar" class="hover:text-white">CALENDAR</a><a href="./faq.html" class="hover:text-white">FAQ</a><a href="./register.html" class="hover:text-white">REGISTER</a><a href="#join" class="px-5 py-2 bg-white text-[#1e3a5f] rounded-full font-extrabold tracking-[0.16em]">JOIN</a>
+    </nav>
+    <div class="flex md:hidden items-center gap-2">
+      <a href="#join" class="px-4 py-2 bg-white text-[#1e3a5f] rounded-full text-[11px] font-black tracking-widest">JOIN</a>
+      <button id="menuBtn" onclick="toggleNav()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/20 text-white text-[18px]">☰</button>
     </div>
-  </header>
+    <div id="mobileMenu" class="hidden md:hidden absolute top-[64px] left-0 w-full bg-white border-t border-zinc-100 shadow-2xl z-50">
+      <div class="px-2 py-2">
+        <a href="#about" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">ABOUT</a>
+        <a href="#calendar" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">CALENDAR</a>
+        <a href="./faq.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">FAQ</a>
+        <a href="./register.html" onclick="toggleNav()" class="block px-4 py-3 rounded-xl text-[12px] font-black tracking-[0.16em] text-[#1e3a5f] hover:bg-zinc-50">REGISTER</a>
+        <a href="#join" onclick="toggleNav()" class="mt-2 block px-4 py-3 rounded-xl bg-[#1e3a5f] text-white text-center text-[12px] font-black tracking-[0.16em]">JOIN PACK 269</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <!-- HERO FULL-BLEED 88VH -->
+  <!-- HERO FULL-BLEED 88VH - EXACT FROM BASELINE -->
   <section class="relative w-full h-[88vh] overflow-hidden">
     <img src="./images/hero-kids-path.jpg" alt="Pack 269 kids hiking" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-black/50"></div>
@@ -43,7 +52,7 @@
     </div>
   </section>
 
-  <!-- WHAT WE DO -->
+  <!-- WHAT WE DO - EXACT FROM BASELINE -->
   <section id="about" class="mx-auto max-w-[1120px] px-6 py-20 md:py-28">
     <div class="max-w-2xl">
       <span class="text-[11px] font-bold tracking-[0.2em] text-[#1e3a5f]">ABOUT OUR PACK</span>
@@ -95,7 +104,7 @@
     </div>
   </section>
 
-  <!-- YEAR AT A GLANCE -->
+  <!-- YEAR AT A GLANCE - ONLY ADDITION IS READ FAQ BUTTON IN FLEX -->
   <section class="mx-auto max-w-[1120px] px-6 pb-20">
     <div class="bg-[#eff6ff] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start">
       <div class="text-[40px] leading-none">🎒</div>
@@ -104,9 +113,10 @@
         <p class="mt-3 text-[15px] leading-relaxed text-zinc-700 max-w-3xl">
           We have a full slate of activities planned this year, with multiple overnight experiences, fun DIY activities, and plenty of time together in service.  Our welcome packet has lots more information on what to expect and how to sign up.
         </p>
-        <a href="https://pack269.org/wp-content/uploads/2026/08/Pack-269-New-Family-Welcome-Packet-2026-2027.pdf" target="_blank" class="mt-6 inline-flex px-6 py-3 bg-[#1e3a5f] text-white rounded-full text-[12px] font-black tracking-[0.16em]">DOWNLOAD WELCOME PACKET PDF</a>
-        <a href="./faq.html"  class="px-7 py-3 bg-white text-[#1e3a5f] rounded-full font-black text-[12px] tracking-[0.16em]">FREQUENTLY ASKED QUESTIONS</a>
-          
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://pack269.org/wp-content/uploads/2026/08/Pack-269-New-Family-Welcome-Packet-2026-2027.pdf" target="_blank" class="inline-flex px-6 py-3 bg-[#1e3a5f] text-white rounded-full text-[12px] font-black tracking-[0.16em]">DOWNLOAD WELCOME PACKET PDF</a>
+          <a href="./faq.html" class="inline-flex px-6 py-3 bg-white border border-zinc-200 text-[#1e3a5f] rounded-full text-[12px] font-black tracking-[0.16em]">READ FAQ →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -165,5 +175,9 @@
       </div>
     </div>
   </footer>
+<script>
+function toggleNav(){var m=document.getElementById('mobileMenu');if(m)m.classList.toggle('hidden');var b=document.getElementById('menuBtn');if(b)b.textContent=m&&!m.classList.contains('hidden')?'✕':'☰';}
+function toggleFAQ(btn){var c=btn.nextElementSibling;var i=btn.querySelector('[data-icon]');var h=c.classList.contains('hidden');c.classList.toggle('hidden');if(i)i.textContent=h?'–':'+';}
+</script>
 </body>
 </html>
